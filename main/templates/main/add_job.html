@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ action|capfirst }} job schedule</h2>
+<form method="post" action=".">{% csrf_token %}
+  <table>
+    {{ cust_form }}
+    {{ sched_form }}
+  </table>
+  <input type="submit" value="{{ action }}">
+</form>
+{% endblock %}

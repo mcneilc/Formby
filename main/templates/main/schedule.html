@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Schedule</h2>
+{% for round in round_list %}
+    <p>{{ round.name }}: {{ round.soonest }},
+       {{ round.count }}
+       job{{ round.count|pluralize}}.
+      {% if round.pk in expanded %}
+          <a href="?{{ round.collapse_link }}">collapse</a></p>
+          <ul>
+            {% for jobschedule in round.job_schedules.all %}
+            <li>{{ jobschedule.customer.name }} {{ jobschedule.customer.address }}</li>
+	    {% endfor %}
+	  </ul>
+      {% else %}
+          <a href="?{{ round.expand_link }}">expand</a></p>
+      {% endif %}
+{% endfor %}
+<p><a href="{% url view_worksheet %}">View worksheet</a></p>
+{% endblock %}

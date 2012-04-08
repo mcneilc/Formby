@@ -1,0 +1,22 @@
+{% extends "printable_base.html" %}
+
+{% block content %}
+<h2>Worksheet</h2>
+<table>
+  <tr>
+    <th>Round</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Cost</th>
+    <th>Owed</th>
+  </tr>
+  {% for job in job_list %}
+  <tr>
+    <td>{{ job.schedule.round.name }}</td>
+    <td>{{ job.schedule.customer.name }}</td>
+    <td>{{ job.schedule.customer.address }}</td>
+    <td>{{ job.schedule.cost }}</td>
+    <td>{{ job.schedule.current_debt }}</td>
+  </tr>
+  {% endfor %}
+{% endblock %}

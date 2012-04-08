@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Formby</title>
+  </head>
+  <body>
+    <header>
+      <h1>Formby</h1>
+      <nav>
+	<ul>
+	  <li><a href="{% url create_object "round" %}">Add Round</a></li>
+	  <li><a href="{% url create_object "jobschedule" %}">Add job schedule</a></li>
+	  <li><a href="{% url view_schedule %}">View schedule</a></li>
+	  <li><a href="{% url end_of_day %}">End of day</a></li>
+	</ul>
+      </nav>
+    </header>
+    <div>
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>
