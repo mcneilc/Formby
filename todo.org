@@ -1,0 +1,32 @@
+** TODO support months etc. for frequencies
+** TODO figure out all the stuff with transactions and stale data!
+
+** TODO boilerplate/bootstrap app (any existing?)
+- base template boiler plate
+- generic views to create, edit, view and model (included last as fallback)
+- add dev apps
+  - south
+  - django_extensions
+  - debug_toolbar
+  - ipython
+  - bpython
+- add standard apps
+  - registration
+    - add templates
+- standard settings
+  - timezone
+  - dev db
+  - transaction middleware
+- favourite js libraries
+- common templatetags, 'macros' (e.g laying out a table etc.)
+
+
+** TODO better editing!!!!!!!!!!!!!!!!!!!!!!!
+- autocompletion
+  - python
+  - django template syntax
+- autoimports
+- view docs for any object
+- view definition and usages
+- mixed modes: django, html, javascript
+- reorder imports
